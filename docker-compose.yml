@@ -1,0 +1,24 @@
+services:
+  react-context-api:
+    image: node:20-alpine
+    container_name: react-context-api
+    hostname: react-context-api
+    restart: unless-stopped
+    tty: true
+    working_dir: /usr/local/app
+    volumes:
+      - /mnt/Gallery/developments/React Projects/React course/react-context-api:/usr/local/app
+    command: >
+      sh -c '
+        npm i &&
+        npm run dev
+      '
+    ports:
+      - "5173:5173"
+    networks:
+      - react-context-api
+
+networks:
+  react-context-api:
+    driver: bridge
+    name: react-context-api
