@@ -7,7 +7,7 @@ services:
     tty: true
     working_dir: /usr/local/app
     volumes:
-      - /mnt/Gallery/developments/React Projects/React course/react-context-api:/usr/local/app
+      - /mnt/sda1/developments/React Projects/React course/react-context-api:/usr/local/app
     command: >
       sh -c '
         npm i &&
